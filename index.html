@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Capture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Office Monitoring System</h1>
+
+    <div class="container">
+        <!-- Video Element for webcam feed -->
+        <video id="webcam" autoplay></video>
+        
+        <!-- Canvas to capture image (hidden) -->
+        <canvas id="snapshot" style="display:none;"></canvas>
+
+        <div class="button-container">
+            <button onclick="captureImage('sign_in')">Sign In</button>
+            <div id="sign_in_image" class="captured-image"></div>
+
+            <button onclick="captureImage('ac_status')">AC Status</button>
+            <div id="ac_status_image" class="captured-image"></div>
+
+            <button onclick="captureImage('office_status')">Office Status</button>
+            <div id="office_status_image" class="captured-image"></div>
+
+            <button onclick="captureImage('corridor_status')">Corridor Status</button>
+            <div id="corridor_status_image" class="captured-image"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
